@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="onRegister()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="name"
+        name="name"
+        required
+        autocomplete="name"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        required
+        autocomplete="email"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+        autocomplete="new-password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="!name || !email || !password">
+      Crear Cuenta
+    </ion-button>
+  </form>
+
+  <ion-item lines="none">
+    <ion-label>
+      ¿Ya tienes cuenta? 
+      <ion-router-link [routerLink]="['/login']">Inicia sesión aquí</ion-router-link>
+    </ion-label>
+  </ion-item>
+</ion-content>

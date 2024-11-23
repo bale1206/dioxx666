@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Control de Salidas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let outing of outings">
+      <ion-icon slot="start" name="location-outline"></ion-icon>
+      <ion-label>
+        <h2>Residente: {{ outing.residentName }}</h2>
+        <p>Origen: {{ outing.origin }}</p>
+        <p>Destino: {{ outing.destination }}</p>
+        <p>Fecha: {{ outing.date }}</p>
+      </ion-label>
+      <ion-button fill="outline" color="tertiary" (click)="viewDetails(outing)">
+        Detalles
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

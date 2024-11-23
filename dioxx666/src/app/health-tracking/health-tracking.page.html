@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Seguimiento de Salud</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let record of healthRecords">
+      <ion-label>
+        <h2>{{ record.date }}</h2>
+        <p>Temperatura: {{ record.temperature }} °C</p>
+        <p>Presión: {{ record.bloodPressure }}</p>
+      </ion-label>
+      <ion-button slot="end" color="primary" (click)="editRecord(record)">
+        Editar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="secondary" (click)="addRecord()">
+    Añadir Registro de Salud
+  </ion-button>
+</ion-content>

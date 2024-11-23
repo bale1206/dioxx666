@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Turnos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let shift of shifts">
+      <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+      <ion-label>
+        <h2>{{ shift.employeeName }}</h2>
+        <p>Turno: {{ shift.shiftTime }}</p>
+        <p>Fecha: {{ shift.date }}</p>
+      </ion-label>
+      <ion-button fill="outline" color="tertiary" (click)="viewDetails(shift)">Detalles</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

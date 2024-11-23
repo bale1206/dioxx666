@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contactos de Emergencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let contact of emergencyContacts">
+      <ion-label>
+        <h2>{{ contact.name }}</h2>
+        <p>{{ contact.phone }}</p>
+      </ion-label>
+      <ion-button slot="end" color="primary" (click)="callContact(contact.phone)">
+        <ion-icon name="call" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="secondary" (click)="addContact()">
+    Añadir Contacto de Emergencia
+  </ion-button>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Administración de Medicamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let medication of medications">
+      <ion-label>
+        <h2>{{ medication.name }}</h2>
+        <p>Dosis: {{ medication.dose }}</p>
+      </ion-label>
+      <ion-button slot="end" color="primary" (click)="editMedication(medication)">
+        Editar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="secondary" (click)="addMedication()">
+    Añadir Medicamento
+  </ion-button>
+</ion-content>

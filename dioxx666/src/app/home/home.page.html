@@ -1,0 +1,50 @@
+<ion-menu content-id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item button routerLink="/medications">
+        Administración de Medicamentos
+      </ion-item>
+      <ion-item button routerLink="/outings">
+        Control de Salidas
+      </ion-item>
+      <ion-item button routerLink="/emergency-contacts">
+        Contactos de Emergencia
+      </ion-item>
+      <ion-item button routerLink="/health-tracking">
+        Seguimiento de Salud
+      </ion-item>
+      <ion-item button routerLink="/shifts">
+        Turnos
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Hogar de Reposo DIOXX666</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/login" color="primary">
+        Iniciar Sesión
+      </ion-button>
+      <ion-button routerLink="/register" color="secondary">
+        Crear Cuenta
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content" class="ion-padding">
+  <h2>Bienvenido/a</h2>
+  <p>Por favor, selecciona una opción del menú o usa los botones de arriba para iniciar sesión o crear una cuenta.</p>
+
+  <ion-button expand="block" color="tertiary" (click)="openMenu()">
+    Abrir Menú
+  </ion-button>
+</ion-content>
