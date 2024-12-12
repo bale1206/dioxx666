@@ -39,6 +39,7 @@ const routes: Routes = [
     path: 'shifts',
     loadChildren: () => import('./shifts/shifts.module').then( m => m.ShiftsPageModule)
   },
+
 ];
 
 @NgModule({

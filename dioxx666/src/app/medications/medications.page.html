@@ -10,9 +10,14 @@
       <ion-label>
         <h2>{{ medication.name }}</h2>
         <p>Dosis: {{ medication.dose }}</p>
+        <p>Horario: {{ medication.schedule }}</p>
+        <p>Residente: {{ medication.resident }}</p>
       </ion-label>
       <ion-button slot="end" color="primary" (click)="editMedication(medication)">
         Editar
+      </ion-button>
+      <ion-button slot="end" color="primary">
+        Imprimir medicamento
       </ion-button>
     </ion-item>
   </ion-list>

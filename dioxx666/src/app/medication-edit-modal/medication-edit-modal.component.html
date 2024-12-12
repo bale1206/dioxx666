@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Medicamento</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="medication.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Dosis</ion-label>
+      <ion-input [(ngModel)]="medication.dose"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Horario</ion-label>
+      <ion-input [(ngModel)]="medication.schedule"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Residente</ion-label>
+      <ion-input [(ngModel)]="medication.resident"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="primary" (click)="save()">Guardar</ion-button>
+</ion-content>
